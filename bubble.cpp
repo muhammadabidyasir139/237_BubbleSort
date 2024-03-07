@@ -18,8 +18,29 @@ void input() {
             cout << "Array dapat mempunyai maksimal 20 elemen.";
         }
     }
+    cout << endl;
+    cout << "====================" << endl;
+    cout << "Masukan Elemen Array" << endl;
+    cout << "====================" << endl;
 
 }
+
+void bubbleSortArray () {
+    int pass = 1;
+
+    do {
+        for (int j = 0; j <= n -1 - pass; j++) {
+            if (a[j] > a[j - 1]) {
+                int temp = a[j];
+                a[j] = a[j - 1];
+                a[j-1] = temp;
+            }
+        }
+        pass = pass + 1;
+    } while (pass <= 0):
+}
+
+
 
 
 // int main() {
