@@ -15,13 +15,18 @@ void input() {
         if (n <= 20)
             break;
         else {
-            cout << "Array dapat mempunyai maksimal 20 elemen.";
+            cout << "\nArray dapat mempunyai maksimal 20 elemen.\n";
         }
     }
     cout << endl;
     cout << "====================" << endl;
     cout << "Masukan Elemen Array" << endl;
     cout << "====================" << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << "data ke-" << (i + 1) << ":";
+        cin >> arr[i]; 
+    }
 
 }
 
@@ -30,14 +35,15 @@ void bubbleSortArray () {
 
     do {
         for (int j = 0; j <= n -1 - pass; j++) {
-            if (a[j] > a[j - 1]) {
-                int temp = a[j];
-                a[j] = a[j - 1];
-                a[j - 1] = temp;
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
         pass = pass + 1;
-    } while (pass <= n):
+
+    } while (pass <= n);
 }
 
 void display() {
@@ -53,11 +59,17 @@ void display() {
 
 }
 
+int main() {
+    input();
+    bubbleSortArray();
+    display();
+    system("pause");
+
+    return 0;
+}
 
 
 
 
-// int main() {
-//     cout << "masukan angka";
-// }; 
+
 
