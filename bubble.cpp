@@ -33,12 +33,26 @@ void bubbleSortArray () {
             if (a[j] > a[j - 1]) {
                 int temp = a[j];
                 a[j] = a[j - 1];
-                a[j-1] = temp;
+                a[j - 1] = temp;
             }
         }
         pass = pass + 1;
-    } while (pass <= 0):
+    } while (pass <= n):
 }
+
+void display() {
+    cout << endl;
+    cout << "=================" << endl;
+    cout << "Elemen Array Yang Telah Tersusun" << endl;
+    cout << "=================" << endl;
+    for (int j = 0; j < n; j++) {
+        cout << arr[j] << endl;
+    }
+    cout << "Jumlah pass = " << n - 1 << endl;
+    cout << endl;
+
+}
+
 
 
 
